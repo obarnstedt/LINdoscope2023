@@ -6,4 +6,4 @@ Behavior analysis: Data from the behavioural experiments will be analyzed in det
 Behavior analysis using DeepLabCut and VAME toolboxes, correlation to neural data (inferred calcium spike onsets).
 
 # Example Data Set:
-If you want to use the example data you can download [video-1](https://drive.google.com/file/d/1w6OW9cN_-S30B7rOANvSaR9c3O5KeF0c/view?usp=sharing) here and find the .csv file in the lab folder.
+If you want to use the example data you can download [video-1](https://drive.google.com/file/d/1w6OW9cN_-S30B7rOANvSaR9c3O5KeF0c/view?usp=sharing) here and find the .csv file in the src folder.
