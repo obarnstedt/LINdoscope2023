@@ -8,6 +8,7 @@ Created on Wed Jun 30 14:41:31 2021
 import matplotlib.pyplot as plt
 import networkx as nx
 import numpy as np
+import os
 
 def behavioral_graph(trans_mat, norm_usage, title_idx):
     
@@ -102,7 +103,7 @@ def load_labels(cfg, files, num_animals, n_cluster, model_name, param):
          
         for idx, file in enumerate(files):
             
-            path_to_file=cfg['project_path']+'\\results\\'+str(file)+'\\'+model_name+'\\'+param+'-'+str(n_cluster)+'\\'+str(n_cluster)+'_km_label_'+file+'.npy'
+            path_to_file=os.path.join(cfg['project_path'],'results',+str(file),model_name,param+'-'+str(n_cluster),str(n_cluster)+'_km_label_'+file+'.npy')
 
             if idx < (int(num_animals / 2)):
                 print("Group 1: "+file)
@@ -124,7 +125,7 @@ def load_labels(cfg, files, num_animals, n_cluster, model_name, param):
 
         file = files[0]
         
-        path_to_file=cfg['project_path']+'\\results\\'+str(file)+'\\'+model_name+'\\'+param+'-'+str(n_cluster)+'\\'+str(n_cluster)+'_km_label_'+file+'.npy'
+        path_to_file=os.path.join(cfg['project_path'],'results',str(file),model_name,param+'-'+str(n_cluster),str(n_cluster)+'_km_label_'+file+'.npy')
 
         lbl = np.load(path_to_file)
         

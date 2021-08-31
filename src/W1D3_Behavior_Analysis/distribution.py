@@ -7,6 +7,7 @@ Created on Wed Jun 30 15:25:11 2021
 
 import sys
 import numpy as np
+import os
 import matplotlib.pyplot as plt
 from scipy.linalg import eig
 from sklearn.cluster import KMeans
@@ -18,13 +19,13 @@ from pathlib import Path
 from vame.util.auxiliary import read_config
 
 
-def motif_dist_norm(cfg, files, model_name, n_cluster):    
+def motif_dist_norm(cfg, files, model_name, n_cluster,param):    
     motif_list = []
     motif_list_norm = []
     for idx, file in enumerate(files):
         print(file)
         
-        path_to_file=cfg['project_path']+'\\results\\'+str(file)+'\\'+model_name+'\\'+'hmm-'+str(n_cluster)+'\\'+str(n_cluster)+'_km_label_'+file+'.npy'
+        path_to_file=os.path.join(cfg['project_path'],'results',str(file),model_name,param+'-'+str(n_cluster),str(n_cluster)+'_km_label_'+file+'.npy')
 
         label=np.load(path_to_file)
         motif_usage = np.unique(label, return_counts=True)
@@ -58,7 +59,7 @@ def barplot(n_cluster, group_dist, ylabel, title):
     ax.set_xticks(x)
     ax.legend()
 
-def behavior_distribution(config):
+def behavior_distribution(config,param):
     config_file = Path(config).resolve()
     cfg = read_config(config_file)
     
@@ -72,7 +73,7 @@ def behavior_distribution(config):
     num_animals = len(files)
         
     # load and normalize motifs; save in a list
-    motif_list_norm, motif_list = motif_dist_norm(cfg, files, model_name, n_cluster=n_cluster)
+    motif_list_norm, motif_list = motif_dist_norm(cfg, files, model_name, n_cluster=n_cluster,param=param)
     
     group_dist = group_distribution(files, motif_list_norm, n_cluster, num_animals)
     
