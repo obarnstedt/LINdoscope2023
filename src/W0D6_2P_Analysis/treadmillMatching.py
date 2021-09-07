@@ -30,7 +30,6 @@ from ptm_treadmill import lickometer_processing
 from ptm_treadmill import resotriggerfinder
 from ptm_treadmill import Kalman_Filt_v
 
-
 analog_file = '2021-08-17_11-27-59_analog_log.tdms'
 counter_file = '2021-08-17_11-27-59_counter_log.tdms'
 
@@ -71,23 +70,17 @@ treadmill_data['ResoTriggerBlocks'], resotriggerblocks = resotriggerfinder(tread
 
 #load CaiMan results
 cnm = load_CNMF('analysis_results.hdf5')
-dFF = cnm.estimates.F_dff.T
-C = cnm.estimates.C.T
-S = cnm.estimates.S.T
+dFF = cnm.estimates.F_dff
+C = cnm.estimates.C
+S = cnm.estimates.S
 good_components= cnm.estimates.idx_components
-num_comps=C.shape[1]
 
-#create dFF_samp
-dFF_samp = np.zeros((num_comps,len(resotriggertimepoints)))
-dFF_samp = C
+#create dFF_samp from dFF of good components
+dFF_samp = dFF[good_idx]
 
-# only need downsampling pos and lap
-
-
-#what we need:
-#1) dFF_samp
-
-#2) pos = posSamp
-pos = treadmill_data['Position'].to_numpy()
+#align position 
+pos_full = treadmill_data['Position'].to_numpy()
+pos = pos[resotriggertimepoints]
 #3) lap = lapSamp
-lap=treadmill_data['Lap']
+lap_full=treadmill_data['Lap']
+lap = lap_full[resotriggertimepoints]
