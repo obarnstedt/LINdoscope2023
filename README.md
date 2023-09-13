@@ -26,6 +26,7 @@ This repository contains code and notebooks to help teach students basic concept
 * [DeepLabCut](https://github.com/DeepLabCut/DeepLabCut): [Mathis et al., 2018](https://www.nature.com/articles/s41593-018-0209-y)
 * [MouseFlow](https://github.com/obarnstedt/MouseFlow)
 * [VAME](https://github.com/LINCellularNeuroscience/VAME): [Luxem et al., 2022](https://www.nature.com/articles/s42003-022-04080-7)
+* [🦓 CEBRA](https://cebra.ai): [Schneider, Lee, Mathis, 2023](https://www.nature.com/articles/s41586-023-06031-6)
 
 ## Raw data:
 All course participants have received access to relevant sample data used for these notebooks. Access can be requested by email to [o.barnstedt@gmail.com](mailto:o.barnstedt@gmail.com).
