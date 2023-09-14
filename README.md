@@ -17,8 +17,9 @@ This repository contains code and notebooks to help teach students basic concept
 * [Eric Thomson](https://github.com/EricThomson) (Flatiron Institute, US)
 * [Mackenzie Mathis](https://github.com/MMathisLab) (EPFL, CH)
 * [Felix Kuhn](https://github.com/flxkuhn) (LIN Magdeburg, DE)
-* [Charitha Omprakash](https://github.com/charithaomprakash) (LIN Magdeburg, DE)
 * [Alisa Bakhareva](https://github.com/alisabak) (UK Cologne, DE)
+* [Arjun Putcha](https://github.com/ArjunPutcha) (UNC, US)
+* [Charitha Omprakash](https://github.com/charithaomprakash) (LIN Magdeburg, DE)
 * [Csilla Novak](https://github.com/novacsilla) (LIN Magdeburg, DE)
 
 ## Main packages used:
