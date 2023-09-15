@@ -2,7 +2,7 @@
 
 [LINdoscope 2023: Neuroimaging and data analysis](www.lindoscope.com) is a two-week [EMBO Practical Course](http://meetings.embo.org/event/23-lindoscope), organised by 
 * [Alessio Attardo](https://sites.google.com/view/the-a-lab/home) (Leibniz Institute for Neurobiology), 
-* [Oliver Barnstedt](http://www.barnstedt.science) (Leibniz Institute for Neurobiology), 
+* [Oliver Barnstedt](http://barnstedt.science) (Leibniz Institute for Neurobiology), 
 * [Sanja Mikulovic](https://www.lin-magdeburg.org/research/research-units/research-group-cognition-emotion) (Leibniz Institute for Neurobiology), 
 * [Janelle Pakan](https://www.pakanlab.com/) (Otto-von-Guericke University Magdeburg), 
 * [Anne Petzold](https://www.researchgate.net/profile/Anne-Petzold-2) (University Hospital Cologne), and
